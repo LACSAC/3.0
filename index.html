@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tareo de Productividad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    
+    <h2>Registro de Tareo</h2>
+    <form id="tareoForm">
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha" required />
+
+      <label for="trabajador">Trabajador</label>
+      <select name="trabajador" required>
+        <option value="">Seleccione</option>
+        <option value="JOHAN JOSEPH FERNANDEZ AMBULAY">JOHAN JOSEPH FERNANDEZ AMBULAY</option>
+        <option value="GEANPIERRE KENYO VILLARRUEL BARRA">GEANPIERRE KENYO VILLARRUEL BARRA</option>
+        <option value="MIGUEL ANGEL RICAPA PALIAN">MIGUEL ANGEL RICAPA PALIAN</option>
+        <option value="EDUARDO DE JESUS FLORES MADERO">EDUARDO DE JESUS FLORES MADERO</option>
+        <option value="MARK DENILSON TIMOTEO MORENO">MARK DENILSON TIMOTEO MORENO</option>
+        <option value="DHETLERT GIL LOZANO">DHETLERT GIL LOZANO</option>
+        <option value="MILTON LEON PALOMINO JAVIER">MILTON LEON PALOMINO JAVIER</option>
+      </select>
+
+      <label for="area">Área</label>
+      <select name="area" required>
+        <option value="">Seleccione</option>
+        <option value="Servicios">SERVICIOS</option>
+        <option value="Taller">TALLER</option>
+        <option value="Maestranza">MAESTRANZA</option>
+      </select>
+
+      <label for="tipotrabajo">Tipo de Trabajo</label>
+      <select name="tipotrabajo" required>
+        <option value="">Seleccione</option>
+        <option value="JOB">JOB</option>
+        <option value="OFA">OFA</option>
+        <option value="SERVICIOS">SERVICIOS</option>
+        <option value="ALMACEN">ALMACÉN</option>
+        <option value="ADMINISTRACION">ADMINISTRACIÓN</option>
+      </select>
+
+      <label for="numerodetrabajo">Código o número de actividad</label>
+      <div class="row-inline">
+        <input type="text" name="numerodetrabajo" placeholder="Ej: CODIGOS: 102 / OFA: 2025-0092" required />
+        <button type="button" class="icon-info" onclick="mostrarPopup()">i</button>
+      </div>
+
+      <label for="actividad">Actividades a realizar</label>
+      <textarea name="actividad" rows="3" placeholder="Describa brevemente las tareas..."></textarea>
+
+      <label for="hora_inicio">Hora de inicio</label>
+      <input type="time" name="hora_inicio" required />
+
+      <label for="hora_final">Hora final</label>
+      <input type="time" name="hora_final" required />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensaje"></p>
+  </main>
+
+  <!-- Pop-up -->
+  <div class="popup" id="popup">
+    <button class="close-btn" onclick="cerrarPopup()">X</button>
+    <h3>Ejemplo de Código de Actividad</h3>
+    <img src="imagenes/Imagen2.jpg" alt="Ejemplo de códigos" />
+    <p style="margin-top: 10px;">Ejemplos: 101 (Ingresar de forma numérica)</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

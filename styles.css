@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  background: url(imagenes/WELCOME\ TO\ LACSAC\ \(1\).png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 0, 0, 0.3);
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  color: #003366;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  color: #111;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+select, input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+select:focus, input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+.row-inline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.row-inline input[type="text"] {
+  flex: 1;
+}
+
+.icon-info {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  max-width: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 9999;
+}
+
+.popup img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0055aa;
+}
+
+#mensaje {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .row-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .icon-info {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+}
